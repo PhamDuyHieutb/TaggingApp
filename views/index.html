@@ -1,0 +1,701 @@
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/public/style.css" />
+<script src="/public/index.js" type="text/javascript"></script>
+
+
+<h1><b>Tagging</b></h1>
+<button id="getUrl" class="bigBtn"> Get URL </button>
+<button id="getUrlPlus" class="bigBtn"> Get URL with IDs </button>
+<div id="getPlus">
+    <input type="number" class="bigBtn" id="inputID">
+    <button id="submitID" class="bigBtn">Get</button>
+</div>
+<div id="urls" class="main1">
+</div>
+<div id="tag" class="main2">
+    <h1 id="name"></h1>
+    <div id="tree1" style="height: 700px; width: 400px; overflow: auto; background-color: #fff; padding: 5px; border: 1px solid #ccc;">
+        <ul>
+	    
+	    
+            <li>
+                <input type="checkbox" value="6"><label>Du lịch & vận tải</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="38"><label>Du lịch</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="148"><label>Dịch vụ lưu trú: biệt thự, khách sạn, nhà khách, nhà nghỉ, nhà trọ,...</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="151"><label>Dịch vụ du lịch khác</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="145"><label>Tour du lịch: inbound, out bound</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="39"><label>vận tải</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="153"><label>Vận tải hàng hóa</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="155"><label>Vận tải hành khách</label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" value="157"><label>Xe khách, tàu hỏa, taxi</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="158"><label>Tàu biển, du thuyền</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="166"><label>Hàng không: hãng hàng không, phòng vé,...</label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" value="7"><label>Việc làm & Giáo dục</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="40"><label>Việc làm</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="41"><label>Giáo dục</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="171"><label>Giáo dục mầm non, tiểu học, trung học cơ sở, trung học phổ thông</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="172"><label>Đào tạo trung cấp, cao đẳng, đại học, liên thông, sau ĐH</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="173"><label>Đào tạo, huấn luyện kỹ năng sống, trại hè</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="174"><label>Khóa học ngắn hạn: thiết kế, kế toán, tin học</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="175"><label>Ngoại ngữ</label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" value="178"><label>Tiếng Anh</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="179"><label>Tiếng Trung</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="180"><label>Tiếng Nhật</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="185"><label>Các ngoại ngữ khác</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="176"><label>Tư vấn du học/MBA</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="177"><label>Giáo dục khác (sách, trang thiết bị giáo dục, ấn phẩm giáo dục,...)</label>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" value="8"><label>Hàng tiêu dùng</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="42"><label>Hóa phẩm: Xà phòng giặt, xà phòng tắm, nước xả vải, nước rửa chén, dung dịch tẩy rửa,...</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="43"><label>Đồ gia dụng: Bát, đĩa, thìa, dĩa, cốc, chén, ấm nước,...</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="44"><label>Hóa mỹ phẩm: dầu gội, sữa tắm, nước hoa, kem đánh răng, mỹ phẩm khác,...</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="45"><label>Đồ dùng sinh hoạt: giấy vệ sinh, tampon, bvs,...</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="47"><label>Văn phòng phẩm</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="51"><label>Hàng tiêu dùng khác</label>
+                    </li>
+
+                </ul>
+            </li>
+
+            
+            <li>
+                <input type="checkbox" value="24"><label>Mẹ và bé</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="162"><label>Thời trang - phụ kiện cho mẹ và bé</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="163"><label>Đồ chơi cho bé</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="164"><label>Vitamin, thuốc, thực phẩm chức năng cho mẹ và bé</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="165"><label>Sữa và các chế phẩm từ sữa</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="167"><label>Khóa học dành cho mẹ</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="168"><label>Khóa học cho trẻ</label>
+                    </li>
+
+                </ul>
+            </li>
+	    <li>
+                <input type="checkbox" value="18"><label>Bán buôn bán lẻ</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="118"><label>Trung tâm thương mại</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="119"><label>Hệ thống siêu thị</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="120"><label>Đại lý phân phối</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="122"><label>Sàn Thương mại điện tử</label>
+                    </li>
+
+                </ul>
+            </li>
+           
+             <li>
+                <input type="checkbox" value="12"><label>Thời trang & trang sức</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="73"><label>Thời trang & phụ kiện</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="75"><label>Trang phuc</label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" value="76"><label>Trang phục nữ</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="77"><label>Trang phục nam</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="78"><label>Giày dép</label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" value="79"><label>Giày dép nữ</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="80"><label>Giày dép nam</label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="81"><label>Túi xách, Ba lô, Valy</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="83"><label>Đồng hồ</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="84"><label>Phụ kiện khác (dây lưng, ví da,…)</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="74"><label>Trang sức</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" value="9"><label>Thực phẩm và đồ uống</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="46"><label>Thực phẩm</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="50"><label>Ngũ cốc</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="52"><label>Rau củ quả</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="53"><label>Thịt cá tươi sống, hải sản tươi sống,…</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="183"><label>Đồ hộp</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="182"><label>Bánh kẹo/ Đồ hộp, thực phẩm chế biến sẵn, ăn liền</label>
+                            </li>
+
+                        </ul>
+
+                    </li>
+                    <li>
+                        <input type="checkbox" value="48"><label>Sữa</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="54"><label>Sữa tươi</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="56"><label>Sữa bột</label>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" value="169"><label>Sữa bột dành cho trẻ em >12 tháng tuổi</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" value="170"><label>Sữa bột dành cho người lớn ( sữa canxi, sữa bột nói chung,…)</label>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="60"><label>Các chế phẩm từ sữa như phô mai, váng sữa, sữa chua,…</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="49"><label>Đồ uống</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="62"><label>Đồ uống không cồn: nước ngọt, nước tinh khiết, nước khoáng …</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="61"><label>Đồ uống có cồn: Bia, rượu …</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" value="10"><label>Y tế và Thuốc</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="63"><label>Dược phẩm</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="65"><label>Thuốc chữa bệnh</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="66"><label>Thực phẩm chức năng</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="64"><label>Y tế & Thiết bị y tế</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="68"><label>Thiết bị y tế</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="67"><label>Khám chữa bệnh (Bệnh viện, phòng khám, dịch vụ y tế...)</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" value="11"><label>Chăm sóc sắc đẹp</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="69"><label>Spa, Massage</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="70"><label>Dịch vụ thể dục, thể thao thẩm mỹ</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="71"><label>Beauty salon</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="72"><label>Thẩm mỹ viện/ Dịch vụ thẩm mỹ</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="184"><label>Dụng cụ thể dục, thể thao/ Dụng cụ chăm sóc sắc đẹp</label>
+                    </li>
+
+                </ul>
+            </li>
+           
+
+	    
+            <li>
+                <input type="checkbox" value="13"><label>Xây dựng và bất động sản</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="85"><label>Xây dựng</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="88"><label>Thiết kế kiến trúc</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="89"><label>Cung ứng vật tư, vật liệu xây dựng</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="90"><label>Xây dựng nhà cửa, công trình...</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="91"><label>Sản xuất vật tư, vật liệu xây dựng</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="92"><label>Xây dựng khác</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="86"><label>Bất động sản</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="93"><label>Chủ đầu tư, dự án BĐS</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="95"><label>Sàn giao dịch và môi giới BĐS</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="97"><label>Bất động sản khác (thuê, cho thuê bất động sản, mua bán bất động sản cá nhân)</label>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" value="14"><label>Đồ nội thất, ngoại thất</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="99"><label>Nội thất (đồ dùng nội thất)</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="186"><label>Giường, tủ, bàn ghế/ Vòi sen, bồn rửa...</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="187"><label>Chăn, ga, gối, đệm</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="100"><label>Ngoại thất (sân vườn, cảnh quan,..)</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" value="15"><label>Nhà hàng, quán bar, trung tâm giải trí</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="101"><label>Nhà hàng & Quán ăn</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="102"><label>Quán bar & Café</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="104"><label>Trung tâm giải trí (công viên, rạp chiếu phim, khu vui chơi...)</label>
+                    </li>
+
+                </ul>
+            </li>
+             <li>
+                <input type="checkbox" value="1"><label>Điện tử & điện lạnh </label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="3"><label>Điện tử </label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="4"><label>Máy tính/laptop/máy tính bảng</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="25"><label>Điện thoại di động/ Điện thoại cố định/ Bộ đàm</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="26"><label>Máy ảnh/ Máy quay</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="27"><label>Tivi/ Màn hình LCD/Dàn audio/Loa/Đầu KTS</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="28"><label>Linh kiện, phụ kiện thiết bị kỹ thuật số</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="5"><label>Điện lạnh</label>
+                        <ul>
+
+                            <li>
+                                <input type="checkbox" value="29"><label>Tủ lạnh/Máy lọc nước</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="30"><label>Máy giặt/Máy sấy quần áo/Máy hút bụi</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="31"><label>Điều hòa/ Bình nóng lạnh</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="32"><label>Máy phát điện/Bộ lưu điện/Ắc quy</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="33"><label>Điện gia dụng</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="55"><label>Radio/Cassette/Máy nghe nhạc</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="57"><label>Đèn điện/Bếp điện/Bàn là</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="82"><label>Máy hút/Máy lọc/Máy xay/ Máy vắt/Máy ép,...</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="181"><label>Dụng cụ điện: máy khoan, xịt áp lực, máy cắt, máy mài, máy bào</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="87"><label>Quạt (hơi nước, tích điện, cây, bàn,...) Lò sưởi, quạt sưởi, đèn sưởi,...</label>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="34"><label>Máy văn phòng</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="94"><label>Máy in/Máy photocopy/Máy fax/Máy đếm tiền/Máy chấm công/Máy hủy tài liệu/Máy scan</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="96"><label>Máy chiếu, màn chiếu</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="98"><label>Điện tử và điện lạnh khác</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="103"><label>Điện tử và điện lạnh khác</label>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" value="16"><label>Ô tô - xe máy</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="105"><label>Ô tô</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="106"><label>xe máy</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="108"><label>Xe đạp</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="109"><label>Phụ tùng ô tô, xe máy, xe đạp</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="111"><label>Dịch vụ sửa chữa, cứu hộ ô tô, xe máy</label>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" value="17"><label>Tài chính, Bảo hiểm</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="112"><label>Ngân hàng</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="113"><label>Bảo hiểm</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="114"><label>Chứng khoán</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="115"><label>Dịch vụ tư vấn đầu tư, tài chính</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="117"><label>Cho thuê tài chính</label>
+                    </li>
+
+                </ul>
+            </li>
+            
+            <li>
+                <input type="checkbox" value="19"><label>Luật & chính phủ</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="123"><label>Dịch vụ pháp luật : Tư vấn luật, công chứng, thừa phát lại …</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="125"><label>Tổ chức phi chính phủ, đại sứ quán</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="126"><label>Hoạt động của chính phủ: Chương trình hành động Quốc gia</label>
+                    </li>
+                </ul>
+            </li>
+            
+            <li>
+                <input type="checkbox" value="21"><label>Dịch vụ</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="142"><label>Tổ chức sự kiện</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="143"><label>Dịch vụ Quà Tặng (tư vấn, kinh doanh, chuyển phát quà tặng …)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="144"><label>Dịch vụ cưới hỏi</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="146"><label>Giải trí (phim, chương trình ca nhạc, sự kiện....)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="147"><label>Dịch vụ chụp ảnh</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="149"><label>Dịch vụ vệ sinh</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="150"><label>Dịch vụ khác</label>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" value="22"><label>Kế toán - Kiểm toán</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="152"><label>Kế toán</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="154"><label>Kiểm toán</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" value="23"><label>Game</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="159"><label>Casual game</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="160"><label>Midcore</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="161"><label>Hardcore</label>
+                    </li>
+                </ul>
+            </li>
+            
+
+            <li>
+                <input type="checkbox" value="20"><label>Ngành công nghiệp, đặc thù</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="127"><label>Điện (vật tư thiết bị điện công nghiệp)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="129"><label>Hóa chất (hóa chất công nghiệp, chế phẩm môi trường)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="130"><label>Năng lượng (Gas, xăng, dầu …)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="132"><label>Sản phẩm công nghiệp</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="133"><label>Khoa học và công nghệ</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="134"><label>Máy công nghiệp</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="135"><label>In ấn và các sản phẩm phụ trợ</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="136"><label>Dịch vụ chuyển phát bưu chính</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="137"><label>Sản phẩm Nông nghiệp</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="138"><label>Sản phẩm Lâm nghiệp</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="139"><label>Sản phẩm Thủy sản</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="140"><label>Ngành khác</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="141"><label>Hội chợ, triển lãm, sự kiện, hội nghị</label>
+                    </li>
+                </ul>
+            </li>
+	    
+            
+	    <li>
+                <input type="checkbox" value="188"><label>Thể thao</label>
+            </li>
+
+          <li>
+                <input type="checkbox" value="2"><label>Viễn thông & truyền thông</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="35"><label>Viễn thông</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="107"><label>Dịch vụ viễn thông: Internet, điện thoại, truyền hình</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="110"><label>Hoạt động xử lý dữ liệu, cho thuê hosting và các hoạt động liên quan</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="36"><label>Truyền thông</label>
+                        <ul>
+                            <li>
+                                <input type="checkbox" value="116"><label>Kênh truyền hình</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="121"><label>Kênh phát thanh</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="124"><label>Báo chí, tạp chí</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="128"><label>Dịch vụ internet: dịch vụ website, trang tin điện tử</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" value="131"><label>Ấn phẩm khác: băng đĩa, in ấn</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="37"><label>Viễn thông và truyền thông khác: phần mềm quản lý,...</label>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<button id="send" class="bigBtn" background-color="#010102"> Send </button>
+<br><br><br><br><br><br>
+<button class="btn bigBtn" id="submitTag" background-color="#0206EE">Submit Tags</button>
+</html>
